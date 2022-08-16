@@ -6,3 +6,5 @@ rsid_common <- fread(file='00-common_all.vcf') # https://ftp.ncbi.nih.gov/snp/or
 names(rsid_common)<-c('CHR','BP','rsid','REF','ALT','QUAL','FILTER','INFO')
 rsid_common$chrpos <- paste0(rsid_common$CHR, "_", rsid_common$BP)
 rsid_common <- rsid_common[,c('rsid','chrpos')]
+
+
